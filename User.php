@@ -56,7 +56,7 @@ class User
   static function authUser($email, $pass) {
     global $mysqli;
     $email = trim(mb_strtolower($email));
-    $pass = trim($passs);
+    $pass = trim($pass);
 
     $result = $mysqli->query("SELECT * FROM `users` WHERE `email`='$email'");
     $result = $result->fetch_assoc();
